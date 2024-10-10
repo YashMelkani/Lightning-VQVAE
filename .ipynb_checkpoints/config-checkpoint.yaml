@@ -1,0 +1,39 @@
+name: conditional-vqvae
+
+nn:
+    n_codebook: 4096
+    d_codebook: 4
+    commitment_cost: 1
+    decay: 0.99
+    
+    causal: True
+    d_model: 128
+    d_feedforward: 256
+    n_head: 4
+    dropout: 0.1
+    
+    lr: 5e-4
+
+data:
+    
+    trainset:
+
+        batch_size: 128
+        events_range: 
+            - 1000
+            - 1100
+        
+        track_len: 32
+    
+    valset:
+    
+        batch_size: 128
+        events_range:
+            - 1100
+            - 1110
+            
+        track_len: 32
+    
+train:
+    epochs: 100
+    val_freq: 5

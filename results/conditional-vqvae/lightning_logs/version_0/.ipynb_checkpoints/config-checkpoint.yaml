@@ -1,0 +1,31 @@
+conditional: true
+config_path: ./config.yaml
+data:
+  trainset:
+    batch_size: 128
+    events_range:
+    - 1000
+    - 1100
+    track_len: 32
+  valset:
+    batch_size: 128
+    events_range:
+    - 1100
+    - 1110
+    track_len: 32
+data_dir: /pscratch/sd/y/yashm/Dr. Ju/track-sort-vqvae/[8, 13, 17]_6
+name: conditional-vqvae
+nn:
+  causal: true
+  commitment_cost: 1
+  d_codebook: 4
+  d_feedforward: 256
+  d_model: 128
+  decay: 0.99
+  dropout: 0.1
+  lr: 5e-4
+  n_codebook: 4096
+  n_head: 4
+train:
+  epochs: 100
+  val_freq: 5

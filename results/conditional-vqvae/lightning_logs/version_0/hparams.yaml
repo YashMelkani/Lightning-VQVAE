@@ -1,0 +1,11 @@
+config:
+  causal: true
+  commitment_cost: 1
+  d_codebook: 4
+  d_feedforward: 256
+  d_model: 128
+  decay: 0.99
+  dropout: 0.1
+  lr: 5e-4
+  n_codebook: 4096
+  n_head: 4
